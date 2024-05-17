@@ -19,6 +19,8 @@ $(document).ready(function(){
         $(`
             <div class="overlay-imagem-li">
                 <a href="${enderecoImagem}" title="Visualizar" target="_blank">Visualizar</a>
+                <button class="share-btn">Compartilhar</button>
+                <button class="delete-btn">Excluir</button>
             </div>
         `).appendTo(novoItem);
 
@@ -28,4 +30,17 @@ $(document).ready(function(){
 
         $('#new-address-image').val('');
     })
-})
+
+    $(document).on('click', '.delete-btn', function() {
+        $(this).closest('li').fadeOut(function() {
+            $(this).remove();
+        });
+    });
+
+    // Evento de clique no botão de compartilhar
+    $(document).on('click', '.share-btn', function() {
+        const imagemUrl = $(this).siblings('a').attr('href');
+        const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(imagemUrl)}`;
+        window.open(whatsappUrl, '_blank');
+    });
+});
