@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <link rel="preconnect" href="http://fonts.googleapis.com">
+    <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1><span class="logo">G</span>photos</h1>
+            <div>
+                <button id="adicionar" type="button">Nova imagem +</button>
+            </div>
+        </header>
+        <div class="container-form">
+            <form>
+                <h2>Inserir nova imagem</h2>
+                <input type="url" id="new-address-image" required placeholder="URL da imagem">
+                <div class="button-group">
+                    <button id="adicionar" type="submit">Adicionar</button>
+                    <button id="btn-cancelar" type="reset">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <ul>
+            <li>
+                <img src="images/foto1.jpg" alt="Gato">
+                <div class="overlay-imagem-li">
+                    <a href="images/foto1.jpg" title="Visualizar" target="_blank">Visualizar</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/foto2.jpg" alt="Gato">
+                <div class="overlay-imagem-li">
+                    <a href="images/foto2.jpg" title="Visualizar" target="_blank">Visualizar</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/foto3.jpg" alt="Gato">
+                <div class="overlay-imagem-li">
+                    <a href="images/foto3.jpg" title="Visualizar" target="_blank">Visualizar</a>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
