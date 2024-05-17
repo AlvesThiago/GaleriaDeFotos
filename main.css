@@ -59,6 +59,7 @@ form {
     flex-direction: column; 
     align-items: center; 
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 form h2 {
@@ -146,21 +147,36 @@ ul li img {
     margin-bottom: 10px;
     opacity: 0;
     transition: all ease .5s;
+    display: flex;
+    justify-content: space-around
 }
 
-.overlay-imagem-li a{
+.overlay-imagem-li a, .overlay-imagem-li .delete-btn, .overlay-imagem-li .share-btn {
     color: #fff;
     background-color: #1a8bd6;
     border-radius: 10px 0px 10px 0;
     padding: 8px;
     font-weight: 400;
     font-size: 12px;
+    margin-left: 5px;
+}
+
+.overlay-imagem-li .delete-btn{
+    background-color: rgb(243, 62, 62);
+}
+
+.overlay-imagem-li .delete-btn:hover{
+    background-color: rgb(211, 49, 49);
+}
+
+.overlay-imagem-li .delete-btn, .overlay-imagem-li .share-btn {
+    cursor: pointer;
 }
 
 ul li:hover .overlay-imagem-li{
     opacity: 1;
 }
 
-.overlay-imagem-li a:hover{
+.overlay-imagem-li a:hover, .overlay-imagem-li .share-btn:hover {
     background-color: #4ea8e4;
 }
